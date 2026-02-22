@@ -5,11 +5,12 @@ import Header from '../Components/Header';
 const Home = () => {
     return (
         <div>
-
+            
             <header>
                   <Header></Header>
             </header>
             <main>
+
                 <section className="left-nav">
 
                 </section>
