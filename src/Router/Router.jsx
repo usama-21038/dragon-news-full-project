@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Home from "../Layouts/Home";
 import HomePage from "../Layouts/Pages/HomePage";
 import CategoryNews from "../Layouts/Pages/CategoryNews";
-
+import React from "react";
 
 const Router = createBrowserRouter([
   {
@@ -15,7 +15,8 @@ const Router = createBrowserRouter([
       },
       {
         path:"/category/:id",
-        element:<CategoryNews></CategoryNews>
+        element:<CategoryNews></CategoryNews>,
+        loader:()=>fetch('/public/demo-data/news.json')
       }
     ]
 

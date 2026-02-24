@@ -12,7 +12,9 @@ const Categories = () => {
             <h1 className='font-bold'>All Categories ({categories?.length || 0})</h1>
             <div className='flex flex-col gap-2 mt-3'>
                 {
-                    categories.map(category=><NavLink key={category.id}  className="hover:bg-gray-200 btn bg-white border-0">{category.name}</NavLink>)
+                    categories.map(category=><NavLink key={category.id}  className="hover:bg-gray-200 btn bg-white border-0"
+                    to={`/category/${category.id}`}
+                    >{category.name}</NavLink>)
                 }
             </div>
 
