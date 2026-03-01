@@ -3,6 +3,9 @@ import Home from "../Layouts/Home";
 import HomePage from "../Layouts/Pages/HomePage";
 import CategoryNews from "../Layouts/Pages/CategoryNews";
 import React from "react";
+import Login from "../Layouts/Pages/login";
+import Register from "../Layouts/Pages/Register";
+import Authlayout from "./Authlayout";
 
 const Router = createBrowserRouter([
   {
@@ -23,7 +26,17 @@ const Router = createBrowserRouter([
   },
   {
     path:"/auth",
-    element: <Home></Home>
+    element: <Authlayout></Authlayout>,
+    children:[
+      {
+        path:"/auth/login",
+        element:<Login></Login>
+      },
+      {
+        path:"/auth/register",
+        element:<Register></Register>
+      }
+    ]
   },
   {
     path:"/news",

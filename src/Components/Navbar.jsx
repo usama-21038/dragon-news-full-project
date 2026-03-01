@@ -12,7 +12,7 @@ const Navbar = () => {
             </div>
             <div className="login-btn flex gap-3 items-center">
                 <img src={user} alt="" />
-                <button className='btn btn-primary px-10'>Login</button>
+                <NavLink to="/auth/login" className='btn btn-primary px-10'>Login</NavLink>
             </div>
         </div>
     );
